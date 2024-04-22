@@ -6,7 +6,7 @@ import java.util.List;
 
 import static org.formacion.ocp.PrimosUtil.esPrimo;
 
-public class GeneradorPrimos implements Primos {
+public class GeneradorPrimosInversa implements Primos {
 
 	@Override
 	public List<Integer> generarPrimos(int limit) {
@@ -16,7 +16,8 @@ public class GeneradorPrimos implements Primos {
 				primos.add(i);
 			}
 		}
+
+		Collections.reverse(primos);
 		return primos;
 	}
-
 }
